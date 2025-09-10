@@ -1,33 +1,102 @@
-#about {
-  width: 90%;
-  margin: 0 auto;
-  max-width: 960px;
-  @media only screen and (min-width: $cut) {
-    width: 80%;
-  }
+// #about {
+//   width: 90%;
+//   margin: 0 auto;
+//   max-width: 960px;
+//   @media only screen and (min-width: $cut) {
+//     width: 80%;
+//   }
+// }
+
+// .tech {
+//   margin: 10px;
+// }
+
+// .user {
+//   text-align: center;
+//   font-size: 60px;
+//   display: flex;
+//   flex-direction: row;
+//   flex-wrap: wrap;
+//   justify-content: space-between;
+//   p {
+//     font-size: 16px;
+//   }
+//   @media only screen and (min-width: $cut) {
+//     flex-wrap: nowrap;
+//     font-size: 75px;
+//   }
+// }
+
+// .user-details {
+//   text-align: center;
+//   margin: 5px auto;
+// }
+
+/* About Me 섹션 스타일 */
+.about-me-section {
+    padding: 60px 20px; /* 상하 여백과 좌우 여백 */
+    text-align: center; /* 제목 중앙 정렬 */
+    background-color: #f9f9f9; /* 섹션 배경색 (선택 사항) */
 }
 
-.tech {
-  margin: 10px;
+.section-title {
+    font-size: 2.5em; /* 제목 크기 */
+    margin-bottom: 40px; /* 제목 아래 여백 */
+    color: #333; /* 제목 색상 */
 }
 
-.user {
-  text-align: center;
-  font-size: 60px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  p {
-    font-size: 16px;
-  }
-  @media only screen and (min-width: $cut) {
-    flex-wrap: nowrap;
-    font-size: 75px;
-  }
+.about-me-content {
+    display: flex; /* 자식 요소들을 가로로 나열 */
+    flex-wrap: wrap; /* 화면이 작아지면 줄 바꿈 */
+    justify-content: center; /* 가운데 정렬 */
+    align-items: flex-start; /* 상단 정렬 */
+    max-width: 1000px; /* 최대 너비 설정 */
+    margin: 0 auto; /* 가운데 정렬 */
 }
 
-.user-details {
-  text-align: center;
-  margin: 5px auto;
+.about-me-text {
+    flex: 1; /* 남은 공간을 차지하도록 설정 */
+    padding: 20px;
+    text-align: left; /* 텍스트 왼쪽 정렬 */
+    min-width: 300px; /* 최소 너비 설정 (너무 좁아지지 않도록) */
+}
+
+.about-me-text h2 {
+    font-size: 1.8em;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.about-me-text p {
+    font-size: 1.1em;
+    line-height: 1.6; /* 줄 간격 */
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.about-me-image {
+    flex: 1; /* 남은 공간을 차지하도록 설정 */
+    padding: 20px;
+    text-align: center; /* 이미지 중앙 정렬 */
+    min-width: 300px; /* 최소 너비 설정 */
+}
+
+.about-me-image img {
+    max-width: 100%; /* 부모 요소에 맞춰 이미지 크기 조절 */
+    height: auto; /* 비율 유지 */
+    border-radius: 8px; /* 이미지 모서리 둥글게 (선택 사항) */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 (선택 사항) */
+}
+
+/* 모바일 화면을 위한 미디어 쿼리 */
+@media (max-width: 768px) {
+    .about-me-content {
+        flex-direction: column; /* 세로로 나열 */
+        align-items: center; /* 가운데 정렬 */
+    }
+
+    .about-me-text, .about-me-image {
+        min-width: unset; /* 최소 너비 해제 */
+        width: 100%; /* 너비 전체 사용 */
+    }
 }
